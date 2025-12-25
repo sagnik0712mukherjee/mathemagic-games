@@ -4,3 +4,8 @@ While Python as a coding language is fun to play with, I thought of doing some e
 
 
 PS: These problems were even created by me!
+
+## Author
+
+**Sagnik Mukherjee**  
+[GitHub Profile](https://github.com/sagnik0712mukherjee)
