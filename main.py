@@ -18,6 +18,7 @@ def main():
     print("5. Decimal to Fraction Converter")
     print("6. Pythagorean Triplets Finder")
     print("7. Pie Share Calculator")
+    print("8. Complex Arithmetic (Add/Sub/Mul/Div)")
     print("0. Exit")
     print("="*30)
     
@@ -44,6 +45,13 @@ def main():
         find_triplets(lower, upper)
     elif choice == '7':
         calculate_highest_share()
+    elif choice == '8':
+        z1 = input("Enter first complex number (e.g., 2 + 12i): ")
+        z2 = input("Enter second complex number (e.g., 1 - i): ")
+        results = complex_math_ops(z1, z2)
+        print("\nResults:")
+        for op, val in results.items():
+            print(f"  {op}: {val}")
     elif choice == '0':
         print("Goodbye!")
         sys.exit()

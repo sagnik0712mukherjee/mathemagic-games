@@ -1,16 +1,16 @@
 def analyze_complex(z):
     s = str(z)
-    s = s.replace('j', 'i')
+    s = s.replace('j', 'i').strip()
     re, im = "0", "0"
-    if ' - ' in s:
-        ls = s.split(' - ')
+    if '-' in s:
+        ls = s.split('-')
         re = ls[0]
         im = ls[1].replace('i', '')
         im = '-' + im
         if im == '': im = '1'
         elif im == '-': im = '-1'
-    elif ' + ' in s:
-        ls = s.split(' + ' )
+    elif '+' in s:
+        ls = s.split('+')
         re = ls[0]
         im = ls[1].replace('i', '')
         if im == '': im = '1'
@@ -21,13 +21,13 @@ def analyze_complex(z):
 def complex_math_ops(z1, z2):
     def extract_parts(z):
         s = str(z).replace('j', 'i')
-        if ' - ' in s:
-            l = s.split(' - ')
+        if '-' in s:
+            l = s.split('-')
             re = float(l[0])
             im_str = l[1].replace('i','')
             im = -float(im_str) if im_str else -1.0
-        elif ' + ' in s:
-            l = s.split(' + ')
+        elif '+' in s:
+            l = s.split('+')
             re = float(l[0])
             im_str = l[1].replace('i','')
             im = float(im_str) if im_str else 1.0
